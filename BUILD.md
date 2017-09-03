@@ -38,10 +38,11 @@ Libraries:
         mkdir build
         cd build
         cmake -DCMAKE_BUILD_TYPE=release .. # for debug build, change to debug
-        //在 Mac 上使用 Brew 安装 OpenSSL 1.1, 编译参数需要调整
-        //OPENSSL_ROOT_DIR 根据自己的路径进行调整
-        //cmake -DOPENSSL_ROOT_DIR=/usr/local/Cellar/openssl@1.1/1.1.0f -DOPENSSL_LIBRARIES=/usr/local/Cellar/openssl@1.1/1.1.0f/lib -DCMAKE_BUILD_TYPE=release ..
         make -j8
+        
+        在 Mac 上使用 Brew 安装 OpenSSL 1.1, 编译参数需要调整
+        OPENSSL_ROOT_DIR 根据自己的路径进行调整
+        cmake -DOPENSSL_ROOT_DIR=/usr/local/Cellar/openssl@1.1/1.1.0f -DOPENSSL_LIBRARIES=/usr/local/Cellar/openssl@1.1/1.1.0f/lib -DCMAKE_BUILD_TYPE=release ..
 
 3. The executables should appear in `build/` directory.
 
